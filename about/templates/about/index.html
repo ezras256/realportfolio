@@ -1,5 +1,10 @@
 {% include 'base.html' with title='About' %}
 {% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock stylesheets %}
+
 {% block content %}
-<div id="title"><p class="oswald-font">EZRA SCHULTZ - ABOUT</p></div>
+<div id="title-extension"><p class="oswald-font"> - ABOUT</p></div>
 {% endblock content %}

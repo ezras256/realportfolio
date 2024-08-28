@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 {% load static %}
+
 <head>
     <title>Ezra Schultz - {{ title }}</title>
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'css/default-style.css' %}">
+    {% block stylesheets %}{% endblock stylesheets %}
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
     </style>
+    <script src="{% static 'js/base.js' %}"></script>
+
 </head>
 
 <html>
-    <body>
-        {% block content %}{% endblock %}
+
+    <body onload="checkCookie()">
+        <div id="title">
+            <p class="oswald-font">EZRA SCHULTZ</p>
+        </div>
+        {% block content %}{% endblock content %}
         <div id="menu" class="drop-shadow">
             <ul>
                 <li class="josefin-sans-font" style="--delay: 1;"><a href="/">HOME</a></li>
@@ -21,6 +29,7 @@
                 <li class="josefin-sans-font" style="--delay: 4;"><a href="/contact/">CONTACT</a></li>
             </ul>
         </div>
-        <script src="{% static 'js/base.js' %}"></script>
+
     </body>
+
 </html>
