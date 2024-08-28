@@ -1,15 +1,13 @@
-
-
 :root {
     overflow: hidden;   
 }
 
 #title {
     position: absolute;
-    width: 50vw;
-    height: 20vh;
-    top: 31vh;
-    left: 25vw;
+    width: 30vw;
+    height: 10vh;
+    top: 36vh;
+    left: 35vw;
 }
 
 #title p {
@@ -63,7 +61,7 @@
     animation-delay: calc((var(--delay) * 0.1s) + 1.2s);
 }
 
-#menu ul li:hover {
+#menu ul li a:hover{
     color: #3cc03c;
 }
 
