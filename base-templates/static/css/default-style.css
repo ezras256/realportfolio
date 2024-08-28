@@ -140,5 +140,6 @@ html {
 
     to {
         transform: translateY(7.5%);
+        /* animation-play-state: paused; */
     }
 }
