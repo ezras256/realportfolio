@@ -1,3 +1,1 @@
 # realportfolio
-
-frfr no cap
