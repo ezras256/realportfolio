@@ -1,0 +1,145 @@
+
+
+:root {
+    overflow: hidden;   
+}
+
+#title {
+    position: absolute;
+    width: 50vw;
+    height: 20vh;
+    top: 31vh;
+    left: 25vw;
+}
+
+#title p {
+    width: 100%;
+    height: 100%;
+    font-size: 3vmax;
+    text-align: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    animation: text-intro 1.2s cubic-bezier(0.9, 0, 0.2, 1.06) 0.6s forwards;
+}
+
+#menu {
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+    top: 50vh;
+    left: 50vw;
+    background-color: #ebebeb;
+    border-radius: 7vh;
+    transform: translateX(-50%) translateY(-50%);
+    animation: menu-intro 1s cubic-bezier(0.9, 0, 0.2, 1.06) 0.5s forwards;
+    overflow: hidden;
+}
+
+#menu ul {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#menu ul li {
+    list-style-type: none;
+    text-align: center;
+    align-content: center;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 25%;
+    height: 100%;
+    font-size: 1.25vmax;
+    color: #000000;
+    transform: translateY(100%);
+    transition: all ease 0.5s;
+    animation: slide-up 0.5s cubic-bezier(0.6, 0.07, 0.22, 1.03) forwards;
+    animation-delay: calc((var(--delay) * 0.1s) + 1.2s);
+}
+
+#menu ul li:hover {
+    color: #3cc03c;
+}
+
+#v {
+    position: absolute;
+    width: 1px;
+    height: 100vh;
+    top: 0vh;
+    left: 50vw;
+    background-color: #ff0000;
+}
+
+.oswald-font {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+}
+
+.josefin-sans-font {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+  }
+
+.drop-shadow {
+    filter: drop-shadow(0.5px 1px 7px #616161);
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    transition: all ease 0.5s;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #53bd53;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+html {
+    background-color: #f3f3f3;
+}
+
+@keyframes menu-intro {
+    to {
+        width: 35vw;
+        top: 51vh;
+    }
+}
+
+@keyframes text-intro {
+    to {
+        transform: scale(1.3) translateY(-1vh);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(7.5%);
+    }
+}

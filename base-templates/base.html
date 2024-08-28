@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>Ezra Schultz - {{ title }}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
+    <link rel="stylesheet" href="{% static 'css/default-style.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+</head>
+
+<html>
+    <body>
+        <div id="title"><p class="oswald-font">EZRA SCHULTZ</p></div>
+        <div id="menu" class="drop-shadow">
+            <ul>
+                <li class="josefin-sans-font" style="--delay: 1;"><a href="/">ABOUT</a></li>
+                <li class="josefin-sans-font" style="--delay: 2;"><a href="/">PROJECTS</a></li>
+                <li class="josefin-sans-font" style="--delay: 3;"><a href="/">FEFEFE</a></li>
+                <li class="josefin-sans-font" style="--delay: 4;"><a href="/">CONTACT</a></li>
+                <!-- <li class="josefin-sans-font" style="--delay: 5;"><a href="/">CONTACT</a></li> -->
+            </ul>
+        </div>
+        <script src="{% static 'js/base.js' %}"></script>
+        {% block content %}{% endblock %}
+    </body>
+</html>
