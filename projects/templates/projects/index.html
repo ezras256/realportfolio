@@ -1,6 +1,12 @@
-{% include 'base.html' with title='PROJECTS' %}
+{% include 'base.html' with title='About' %}
 {% load static %}
-{% block content %}
-<div id="title"><p class="oswald-font">EZRA SCHULTZ - PROJECTS</p></div>
 
+{% block stylesheets %}
+<!-- <link rel="preload" href="{% static 'css/style.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% endblock stylesheets %}
+
+{% block content %}
+<div id="title-extension"><p class="oswald-font"> - PROJECTS</p></div>
 {% endblock content %}
