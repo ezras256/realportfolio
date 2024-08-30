@@ -1,5 +1,24 @@
-function setPreviousPage(siteName) {
+function setPreviousPage(siteName) { 
+    console.log(getCookie("currentPage")); 
+    document.getElementById("old-title-extension-text").innerHTML = " - " + getCookie("currentPage").toUpperCase();
+
     document.cookie = "currentPage=" + siteName + "; path=/";
-    console.log(document.cookie);
-    
+    console.log(getCookie("currentPage")); 
+
 }
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }

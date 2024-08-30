@@ -1,6 +1,13 @@
 {% include 'base.html' with title='Contact' %}
 {% load static %}
+
+{% block stylesheets %}
+<!-- <link rel="preload" href="{% static 'css/style.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/contactstyle.css' %}">
+
+{% endblock stylesheets %}
 {% block content %}
-<div id="title"><p class="oswald-font">EZRA SCHULTZ - CONTACT</p></div>
+<div id="old-title-extension"><p class="oswald-font" id="old-title-extension-text"></p></div>
+<div id="title-extension"><p class="oswald-font"> - CONTACT</p></div>
 
 {% endblock content %}

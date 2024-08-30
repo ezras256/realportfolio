@@ -31,7 +31,7 @@
     margin: 0px;
     padding: 0px;
     transform: scale(1.3) translateY(-100%);
-    animation: up 1s ease 0.7s forwards;
+    animation: up 1s ease 2.4s forwards;
 }
 
 #old-title-extension {
@@ -69,7 +69,7 @@
 
 @keyframes left {
     to {
-        left: 26.5vw;
+        left: 27vw;
     }
 }
 
