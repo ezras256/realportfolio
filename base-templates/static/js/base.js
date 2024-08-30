@@ -1,9 +1,12 @@
 function setPreviousPage(siteName) { 
-    console.log(getCookie("currentPage")); 
-    document.getElementById("old-title-extension-text").innerHTML = " - " + getCookie("currentPage").toUpperCase();
+    // alert(getCookie("currentPage")); 
+    if (siteName == "home") {
+      document.getElementById("old-title-extension-text").textContent = "";
+    } else {
+      document.getElementById("old-title-extension-text").textContent = " - " + getCookie("currentPage").toUpperCase();
+    }
 
     document.cookie = "currentPage=" + siteName + "; path=/";
-    console.log(getCookie("currentPage")); 
 
 }
 
