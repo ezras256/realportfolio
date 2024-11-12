@@ -4,25 +4,27 @@ function setPreviousPage(siteName) {
 
 function setText() {
   let text = document.getElementById("old-title-extension-text");
-  
-  text.textContent = " - " + getCookie("currentPage").toUpperCase();
+  let newText = document.getElementById("title-extension-text")
+  if (!getCookie("currentPage") == 'home') {
+    text.textContent = " - " + getCookie("currentPage").toUpperCase();
+  } else {
+    text.textContent = ""; 
+  }
   updateTitle(); 
-  console.log(getCookie("currentPage")); 
-
+  // console.log(getCookie("currentPage")); 
 }
 
 function updateTitle() {
   let titleStyle = document.getElementById("title").style;
-  if (getCookie("currentPage") == "about") {
+  if (getCookie("currentPage") == "home") {
+    titleStyle.left = "35vw";
+  } else if (getCookie("currentPage") == "about") {
     titleStyle.left = "28.5vw";
   } else if (getCookie("currentPage") == "projects") {
     titleStyle.left = "26.5vw";
   } else if (getCookie("currentPage") == "contact") {
     titleStyle.left = "27vw";
-  } else {
-    titleStyle.left = "35vw";
-  } 
-  
+  }
 }
 
 function getCookie(cname) {
