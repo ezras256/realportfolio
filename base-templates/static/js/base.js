@@ -13,14 +13,6 @@ function setText() {
         text.textContent = "";
     }
 
-    if (sessionStorage.getItem("prev") == sessionStorage.getItem("lastVisited")) {
-        text.style.animationPlayState = "paused"; 
-        document.getElementById("title-extension").children.item(0).style.animationPlayState = "paused"; 
-    } else {
-        text.style.animationPlayState = "running"; 
-        document.getElementById("title-extension").children.item(0).style.animationPlayState = "running"; 
-    }
-
     updateTitle(); 
     
 }
