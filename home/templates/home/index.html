@@ -1,6 +1,11 @@
 {% include 'base.html' with title='Home' %}
 {% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock stylesheets %}
 {% block content %}
+<!-- <div id="cover"></div> -->
 <div id="old-title-extension"><p class="oswald-font" id="old-title-extension-text"></p></div>
 <div id="title-extension"><p class="oswald-font"></p></div>
 {% endblock content %}

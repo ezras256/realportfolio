@@ -15,20 +15,26 @@
 </head>
 
 <html>
-    <body onload="setText()">
-        <div id="title">
-            <p class="oswald-font">EZRA SCHULTZ</p>
-        </div>
-        {% block content %}{% endblock content %}
-        <div id="menu" class="drop-shadow">
-            <ul>
-                <li class="josefin-sans-font" style="--delay: 1;"><a onclick="setPreviousPage('home')" href="/">HOME</a></li>
-                <li class="josefin-sans-font" style="--delay: 2;"><a onclick="setPreviousPage('projects')" href="/projects/">PROJECTS</a></li>
-                <li class="josefin-sans-font" style="--delay: 3;"><a onclick="setPreviousPage('about')" href="/about/">ABOUT</a></li>
-                <li class="josefin-sans-font" style="--delay: 4;"><a onclick="setPreviousPage('contact')" href="/contact/">CONTACT</a></li>
-            </ul>
-        </div>
 
+    <body onload="setText();">
+        <div id="title-content">
+            <div id="title">
+                <p class="oswald-font">EZRA SCHULTZ</p>
+            </div>
+            {% block content %}{% endblock content %}
+            <div id="menu" class="drop-shadow">
+                <ul>
+                    <li class="josefin-sans-font" style="--delay: 1;"><a onclick="setPreviousPage('home');"
+                            href="/">HOME</a></li>
+                    <li class="josefin-sans-font" style="--delay: 2;"><a onclick="setPreviousPage('projects');"
+                            href="/projects/">PROJECTS</a></li>
+                    <li class="josefin-sans-font" style="--delay: 3;"><a onclick="setPreviousPage('about');"
+                            href="/about/">ABOUT</a></li>
+                    <li class="josefin-sans-font" style="--delay: 4;"><a onclick="setPreviousPage('contact');"
+                            href="/contact/">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
     </body>
 
 </html>

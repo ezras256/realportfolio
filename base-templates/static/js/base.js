@@ -1,44 +1,34 @@
-function setPreviousPage(siteName) { 
-    document.cookie = "currentPage=" + siteName + ";";
+function setPreviousPage(siteName) {
+    prev = sessionStorage.getItem("lastVisited");
+    sessionStorage.setItem("prev", prev); 
+    sessionStorage.setItem("lastVisited", siteName);
+
 }
 
 function setText() {
-  let text = document.getElementById("old-title-extension-text");
-  let newText = document.getElementById("title-extension-text")
-  if (!getCookie("currentPage") == 'home') {
-    text.textContent = " - " + getCookie("currentPage").toUpperCase();
-  } else {
-    text.textContent = ""; 
-  }
-  updateTitle(); 
-  // console.log(getCookie("currentPage")); 
+    let text = document.getElementById("old-title-extension-text");
+    if (sessionStorage.getItem("prev") != 'home') {
+        text.textContent = " - " + sessionStorage.getItem("prev").toUpperCase();
+    } else {
+        text.textContent = "";
+    }
+
+    updateTitle(); 
+    
 }
 
 function updateTitle() {
-  let titleStyle = document.getElementById("title").style;
-  if (getCookie("currentPage") == "home") {
-    titleStyle.left = "35vw";
-  } else if (getCookie("currentPage") == "about") {
-    titleStyle.left = "28.5vw";
-  } else if (getCookie("currentPage") == "projects") {
-    titleStyle.left = "26.5vw";
-  } else if (getCookie("currentPage") == "contact") {
-    titleStyle.left = "27vw";
-  }
-}
+    let titleStyle = document.getElementById("title").style;
 
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+    if (sessionStorage.getItem("prev") == 'home') {
+        titleStyle.left = "35vw";
+    } else if (sessionStorage.getItem("prev") == 'about') {
+        titleStyle.left = "28.5vw";
+    } else if (sessionStorage.getItem("prev") == 'projects') {
+        titleStyle.left = "26.5vw";
+    } else if (sessionStorage.getItem("prev") == 'contact') {
+        titleStyle.left = "27vw";
+    } else {
+        console.warn("Transitions broken :("); 
     }
-    return "";
-  }
+}
