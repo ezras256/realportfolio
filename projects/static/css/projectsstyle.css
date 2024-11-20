@@ -1,11 +1,11 @@
 #project-container {
     position: absolute;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     top: 20vh; 
     left: 0px;
     /* background-color: red; */
-    z-index: -5;
+    z-index: -50;
 }
 
 #title {
@@ -46,7 +46,6 @@
 #menu {
     width: 35vw;
     top: 51vh;
-    /* animation: menu-intro-new 1s ease 1s forwards;  */
 }
 
 #menu ul li {

@@ -1,5 +1,13 @@
 :root {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+#title-content {
+    position: absolute;
+    top: 30vh; 
+    left: 0px; 
+    width: 100vw;
+    height: 100vh;
 }
 
 #title {
@@ -63,15 +71,27 @@
     animation: slide-up 0.5s cubic-bezier(0.6, 0.07, 0.22, 1.03) forwards;
     animation-delay: calc((var(--delay) * 0.1s) + 1.2s);
 }
+
 #title-extension p {
-    animation: up 1s ease 1.2s forwards;
+    /* top: 36%;  */
+    animation: up 0.7s ease 1.2s forwards;
+}
+
+#title-extension {
+    position: absolute;
+    width: 30vw;
+    height: 10%;
+    top: 50%;
+    left: 46vw;
+    overflow: hidden;
+    z-index: 500;
 }
 
 #old-title-extension {
     position: absolute;
     width: 30vw;
-    height: 10vh;
-    top: 36vh;
+    height: 10%;
+    top: 65%;
     left: 46vw;
     overflow: hidden;
     z-index: 500;
@@ -89,7 +109,7 @@
     animation: down 1s ease 0.5s forwards;
 }
 
-#menu ul li a:hover{
+#menu ul li a:hover {
     color: #3cc03c;
 }
 
@@ -105,7 +125,7 @@
     font-optical-sizing: auto;
     font-weight: 450;
     font-style: normal;
-  }
+}
 
 .drop-shadow {
     filter: drop-shadow(0.5px 1px 7px #616161);
@@ -114,7 +134,7 @@
 a {
     color: #000000;
     text-decoration: none;
-    transition: all ease 0.5s; 
+    transition: all ease 0.5s;
 }
 
 a:link {
