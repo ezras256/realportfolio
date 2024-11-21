@@ -21,6 +21,8 @@
             <div id="title">
                 <p class="oswald-font">EZRA SCHULTZ</p>
             </div>
+            <div class="drop-shadow" id="down-button" onclick="document.getElementById('page-content').scrollIntoView({ behavior: 'smooth' }); "><div id="arrow" style="background-image: url({% static '/images/down-arrow-svgrepo-com.png' %});"></div></div>
+
             {% block content %}{% endblock content %}
             <div id="menu" class="drop-shadow">
                 <ul>
@@ -35,6 +37,9 @@
                 </ul>
             </div>
         </div>
+
+        <div id="page-content">{% block pageContent %}{% endblock pageContent %}</div>
+        
     </body>
 
 </html>

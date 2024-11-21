@@ -1,11 +1,22 @@
-#project-container {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 20vh; 
-    left: 0px;
-    /* background-color: red; */
-    z-index: -50;
+#content-container {
+    width: 100%; 
+    height: 100%;
+    top: 0%; 
+    left: 0%; 
+    display: flex;
+    align-items: center;
+}
+
+#content-container * {
+    display: flex;
+    flex: 1 1 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfdfdf;
+    scale: 0.9;
+    height: 100%;
+    border-radius: 2.5vmax;
 }
 
 #title {
@@ -46,6 +57,7 @@
 #menu {
     width: 35vw;
     top: 51vh;
+    /* animation: menu-intro-new 1s ease 1s forwards;  */
 }
 
 #menu ul li {
