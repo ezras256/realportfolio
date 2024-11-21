@@ -31,4 +31,27 @@ function updateTitle() {
     } else {
         console.warn("Transitions broken :("); 
     }
+
+    updateArrow(); 
+}
+
+function updateArrow() {
+    let active = sessionStorage.getItem("lastVisited"); 
+    let downButton = document.getElementById("down-button"); 
+    let include = ['projects', 'about', 'contact']; 
+    console.log(active); 
+    if ((active == 'home' || active == null) && active != sessionStorage.getItem("prev")) {
+        downButton.style.scale = "1";
+        downButton.style.animation = "scale-down 0.5s ease 0.75s forwards"; 
+    } else if (include.includes(active) && include.includes(sessionStorage.getItem("prev"))) {
+        downButton.style.scale = "1"; 
+        downButton.style.animationPlayState = "paused"; 
+    }
+}
+
+function initContent() {
+    let pageContentHolder = document.getElementById("page-content"); 
+    let contentContainer = document.getElementById("content-container"); 
+
+    pageContentHolder.appendChild(contentContainer); 
 }
