@@ -5,18 +5,27 @@
     left: 0%; 
     display: flex;
     align-items: center;
+    /* justify-content;  */
 }
 
 #content-container * {
     display: flex;
-    flex: 1 1 0;
+    /* flex: 1 1 0; */
     text-align: center;
     align-items: center;
     justify-content: center;
     background-color: #dfdfdf;
     scale: 0.9;
-    height: 100%;
+    /* height: 100%; */
     border-radius: 2.5vmax;
+}
+
+#content-container .w1 {
+    flex: 1 1 0; 
+}
+
+#content-container .h1 {
+    aspect-ratio: 1; 
 }
 
 #title {
