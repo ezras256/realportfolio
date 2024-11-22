@@ -1,5 +1,8 @@
 function setPreviousPage(siteName) {
     prev = sessionStorage.getItem("lastVisited");
+    if (prev == null) {
+        prev = 'home'; 
+    }
     sessionStorage.setItem("prev", prev); 
     sessionStorage.setItem("lastVisited", siteName);
 

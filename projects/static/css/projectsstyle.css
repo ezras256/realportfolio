@@ -4,10 +4,11 @@
     top: 0%;
     left: 0%;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    row-gap: 1vmax;
-    column-gap: 1vmax;
+    grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(5, 20vw);
+    row-gap: 2vmin;
+    column-gap: 2vmin;
+    justify-content: center;
 }
 
 #content-container * {
@@ -19,12 +20,40 @@
     border-radius: 2.5vmax;
 }
 
+#content-container .square {
+    aspect-ratio: 1;
+}
+
 #a {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
+}
+
+#d {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+#e {
+    grid-column-start: 5;
+    grid-column-end: 6;
     grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#f {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
     grid-row-end: 4;
 }
+
+#g {
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+
 
 #content-container .br {
     flex-basis: 100%;
