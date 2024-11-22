@@ -4,10 +4,12 @@
 
 #page-content {
     position: absolute;
-    width: 100vw;
+    /* width: 100vh; */
     height: 100vh;
+    aspect-ratio: 1;
     top: 100vh; 
-    left: 0px;
+    left: 50vw;
+    transform: translateX(-50%);
     z-index: -5;
     animation: content-slide 1s ease 1s forwards; 
 }
